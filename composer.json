@@ -1,0 +1,34 @@
+{
+    "name": "wenhsing/tongtu-php-sdk",
+    "description": "Tongtu Erp",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wenhsing",
+            "email": "wenhsing@qq.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-curl": "^7.2",
+        "guzzlehttp/guzzle": "^6.0 || ^7.0",
+        "monolog/monolog": "^2.0",
+        "psr/container": "^1.0",
+        "symfony/event-dispatcher": "^4.4 || ^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+        "symfony/var-dumper": "^4.4 || ^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wenhsing\\Tongtu\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wenhsing\\TongtuTests\\": "tests/"
+        }
+    }
+}
