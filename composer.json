@@ -1,5 +1,5 @@
 {
-    "name": "wenhsing/tongtu-php-sdk",
+    "name": "wenhsing/tongtu-sdk-php",
     "description": "Tongtu Erp",
     "type": "library",
     "license": "MIT",
@@ -29,6 +29,13 @@
     "autoload-dev": {
         "psr-4": {
             "Wenhsing\\TongtuTests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wenhsing\\Tongtu\\LaravelServiceProvider"
+            ]
         }
     }
 }

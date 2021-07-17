@@ -17,7 +17,7 @@ class Tongtu
 
     public function __construct(Config $config)
     {
-        $this->config = $config;
+        $this->setConfig($config);
         $this->registerEventService();
         $this->registerLogService();
     }
@@ -38,12 +38,18 @@ class Tongtu
             }
             throw new ClientException("[$action] must be an instance of ".RequestContract::class);
         }
-        throw new ClientException("Action [$action] not exists");
+        throw new ClientException("Action [$action] does not exists");
     }
 
     public function getConfig()
     {
         return $this->config;
+    }
+
+    public function setConfig(Config $config)
+    {
+        $this->config = $config;
+        return $this;
     }
 
     protected function getActionName($method)

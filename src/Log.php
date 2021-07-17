@@ -75,7 +75,7 @@ class Log
     protected function getHandler()
     {
         if (is_null($this->handler)) {
-            $outpath = $this->config['outpath'];
+            $outpath = $this->config['outpath'] ?? sys_get_temp_dir();
             if (!is_dir($outpath)) {
                 mkdir($outpath, 0755, true);
             }
